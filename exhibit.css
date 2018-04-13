@@ -1,0 +1,384 @@
+/* /////////////////////////////// Initialize with Small Screen /////////////////////////////// */
+
+html {
+    font-size: 16px;
+}
+
+.flex-container {
+    display: flex;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    margin: 0rem;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    margin: 0rem;
+}
+
+h2 {
+    font-size: 0.75rem;
+    font-weight: 300;
+    margin: 0rem;
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 0.87rem;
+    margin: 0rem;
+}
+
+h4 {
+    font-size: 0.87rem;
+    font-weight: 300;
+    margin: 0rem;
+}
+
+h5 {
+    font-size: 0.85rem;
+    font-style: italic;
+    font-weight: 300;
+    margin: 0rem;
+}
+
+h6 {
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0rem;
+    margin: 0rem;
+    line-height: 1.5rem;
+}
+
+p {
+    font-weight: 300;
+    font-style: normal;
+    font-size: 0.75rem;
+    line-height: 1.4rem;
+    margin: 0.5rem 0rem;
+}
+
+ol {
+    list-style-type: none;
+    padding: 0rem;
+    margin: 0rem;
+}
+
+li {
+    display: inline;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+}
+
+li a:hover {
+    font-weight: 700;
+}
+
+img {
+    width: 100%;
+}
+
+.button {
+    display: inline;
+}
+
+.bar {
+    color: #FFFFFF;
+    background-color: #E8AB9E;
+    width: 100%;
+}
+
+#header {
+    text-align: center;
+    box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, 0.09);
+    position: fixed;
+    padding: 1.5rem 0rem;
+}
+
+#header-title {
+    margin-top: 1rem;
+}
+
+#subtitle {
+    flex-direction: row;
+    justify-content: center;
+}
+
+#content {
+    padding: 10rem 1.4rem 0rem;
+    color: #6C2E2F;
+    flex-direction: column;
+}
+
+#gallery {
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.artwork {
+    margin: 1rem 0rem 0rem;
+}
+
+.art-desc {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 0.5rem;
+    margin-bottom: 1.4rem;
+}
+
+#address {
+    padding: 1.5rem;
+}
+
+#hours {
+    padding: 1.5rem;
+}
+
+h6.less-bold {
+    font-weight: 600;
+}
+
+div.s-break {
+    display: inline;
+    margin: 0rem 0.3rem;
+    font-weight: 300;
+}
+
+div.white-space {
+    margin: 0rem 0.08rem;
+}
+
+div.m-break {
+    display: none;
+}
+
+#large-screen {
+    display: none;
+}
+
+/* //////////////////////////////////////////////////////////////  */
+
+@media only screen and (min-width: 400px) {
+    #content {
+        padding: 10rem 1.6rem 0rem;
+    }
+    .art-desc {
+        margin-bottom: 1.5rem;
+    }
+    h2 {
+        font-size: 0.8rem;
+    }
+}
+
+/* /////////////////////////////// Medium Screen /////////////////////////////// */
+
+@media only screen and (min-width: 650px) {
+    h1 {
+        font-size: 2.2em;
+        text-align: left;
+    }
+    h2 {
+        font-size: 1.1rem;
+        text-align: left;
+    }
+    h3 {
+        font-size: 1.2rem;
+    }
+    h4 {
+        font-size: 1.2rem;
+    }
+    h5 {
+        font-size: 0.85rem;
+    }
+    h6 {
+        font-size: 0.75rem;
+        line-height: 1.3rem;
+    }
+    h6.less-bold {
+        font-weight: 500;
+    }
+    p {
+        font-size: 0.75rem;
+        line-height: 1.3rem;
+    }
+    li {
+        font-size: 0.7rem;
+    }
+    #header {
+        position: static;
+        box-shadow: none;
+        display: grid;
+        grid-template-areas: 'title nav';
+        padding: 2rem 0rem;
+    }
+    #nav-bar {
+        grid-area: nav;
+        justify-content: right;
+        margin-top: 0.7rem;
+        margin-right: 1rem;
+    }
+    #header-title {
+        grid-area: title;
+        justify-content: left;
+        margin-top: 0rem;
+        margin-left: 2rem;
+    }
+    .button {
+        padding: 0rem 0.5rem;
+    }
+    #content {
+        padding: 1.5rem 1.5rem 0rem;
+        color: #6C2E2F;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    #info {
+        flex: 0 0 auto;
+        width: 33%;
+        max-width: 200px;
+    }
+    #subtitle {
+        flex-direction: column;
+    }
+    #gallery {
+        flex: 0 1 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: stretch;
+        justify-content: space-between;
+    }
+    .artwork {
+        margin: 0rem 0rem 0rem 1.5rem;
+        flex: 0 1 auto;
+        max-width: 44%;
+    }
+    img {
+        flex: 0 1 auto;
+    }
+    .art-desc {
+        flex-direction: column;
+        margin-top: 0.5rem;
+        margin-bottom: 1.5rem;
+    }
+    #footer {
+        display: flex;
+        flex-direction: row;
+    }
+    #address {
+        min-width: 200px;
+        max-width: 200px;
+    }
+    #hours {
+        padding: 1.5rem 0rem;
+    }
+    ol {
+        text-align: right;
+    }
+    li {
+        padding: 0.4rem;
+    }
+    div.s-break {
+        display: none;
+    }
+    div.white-space {
+        display: none;
+    }
+    div.m-break {
+        display: block;
+    }
+}
+
+/* //////////////////////////////////////////////////////////////  */
+
+@media only screen and (min-width: 800px) {
+    .artwork {
+        margin: 0rem 0rem 0rem 1.5rem;
+        flex: 0 1 auto;
+        max-width: 29%;
+    }
+}
+
+/* /////////////////////////////// Large Screen /////////////////////////////// */
+
+@media only screen and (min-width: 992px) {
+    h3 {
+        font-size: 1.2rem;
+    }
+    h5 {
+        font-size: 1.2rem;
+    }
+    p {
+        line-height: 1.5rem;
+    }
+    img .bot-row {
+        max-width: 16%;
+    }
+    #nav-bar {
+        margin-right: 2rem;
+    }
+    #subtitle2 {
+        flex-direction: column;
+        padding: 2rem 0rem 1.5rem 2rem;
+        width: 20%;
+        flex: 0 0 33%;
+        min-width: 200px;
+        max-width: 268px;
+    }
+    #content {
+        display: none;
+        padding: 1rem 1rem 0rem;
+    }
+    #gallery {
+        flex-wrap: nowrap;
+        flex-direction: row;
+    }
+    .artwork {
+        flex: 1 1 10%;
+        max-width: 16%;
+        margin: 0rem;
+        padding: 0rem;
+    }
+    .art-desc {
+        margin-top: 1rem;
+        margin-bottom: 0rem;
+        flex-direction: row;
+    }
+    #address {
+        padding: 2.5rem;
+    }
+    #hours {
+        padding: 2.5rem 2.5rem 2.5rem 2.5rem;
+    }
+    div.white-space {
+        display: block;
+    }
+    #large-screen {
+        display: block;
+    }
+    #top {
+        display: flex;
+        flex-direction: row;
+        padding: 1rem;
+        justify-content: center;
+        color: #6C2E2F;
+    }
+    #bot {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom: 0.1rem;
+    }
+    #space {
+        margin: 1.5rem;
+    }
+    #bigpic {
+        flex-direction: column;
+    }
+    #main-pic {
+        max-width: 100%;
+    }
+}
