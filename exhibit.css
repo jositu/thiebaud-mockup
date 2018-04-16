@@ -298,7 +298,7 @@ div.m-break {
     .artwork {
         margin: 0rem 0rem 0rem 1.5rem;
         flex: 0 1 auto;
-        max-width: 29%;
+        max-width: 28%;
     }
 }
 
@@ -380,5 +380,15 @@ div.m-break {
     }
     #main-pic {
         max-width: 100%;
+    }
+    .desc {
+        display: flex;
+        flex-direction: row;
+    }
+    .click {
+        display: none;
+    }
+    .bot-row:hover {
+        box-shadow: 0rem 0rem 0.5rem #6C2E2F;
     }
 }
